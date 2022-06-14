@@ -25,7 +25,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <% for ( let i = 0; i < posts.length; i++ ) { %>
         <div class="post-preview">
-          <a href="post.html">
+          <a href="/posts/<%= posts[i]._id %>">
             <h2 class="post-title">
               <%= posts[i].name %>
             </h2>
@@ -35,7 +35,9 @@
           </a>
           <p class="post-meta">Posted by
             <a href="#">Mehmet Urmaç</a>
-            <%= posts[i].dateCreated %></p>
+            <%= posts[i].dateCreated.toLocaleString('en-En', {month: 'long'}) %>
+            <%= posts[i].dateCreated.getDate() %>,
+            <%= posts[i].dateCreated.getFullYear() %></p>
         </div>
         <hr>
         <% } %>
