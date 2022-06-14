@@ -22,6 +22,8 @@
 
 - [mongoose](https://www.npmjs.com/package/mongoose)
 
+- [method-override](https://www.npmjs.com/package/method-override)
+
 ---
 
 ## License
