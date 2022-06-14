@@ -9,7 +9,9 @@ const postControllers = require("./controllers/postControllers");
 const app = express();
 
 //CONNECT DB
-mongoose.connect("mongodb://localhost/cleanblog-test-db");
+mongoose.connect(
+  "mongodb+srv://mehmeturmac:HpWeRMqzSOEaExKv@cluster0.k6zxgsp.mongodb.net/cleanblog-db?retryWrites=true&w=majority"
+);
 
 //TEMPLATE ENGINE
 app.set("view engine", "ejs");
