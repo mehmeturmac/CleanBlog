@@ -33,7 +33,7 @@ app.get("/about", pageControllers.getAboutPage);
 app.get("/add_post", pageControllers.getAddPage);
 app.get("/posts/edit_post/:id", pageControllers.getEditPage);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server started on port: ${port}`);
 });
